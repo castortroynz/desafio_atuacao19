@@ -129,8 +129,8 @@ processor = [TokenizeProcessor(tokenizer=tokenizer), NumericalizeProcessor(max_v
 
 
 data_lm = (TextList.from_csv(path, 'treinamento_utf-8.csv', cols='mensagem', processor=processor)           
-            .split_by_rand_pct(0.1, seed=50)       #We randomly split and keep 10% (10,000 reviews) for validation
-            .label_for_lm()               #We want to do a language model so we label accordingly
+            .split_by_rand_pct(0.1, seed=50)       #Dividindo randomicamente o dataset em 10% para validação
+            .label_for_lm()                        ##Setando a coluna de label
             .databunch(bs=bs))
 data_lm.save('data_lm.pkl')
 
