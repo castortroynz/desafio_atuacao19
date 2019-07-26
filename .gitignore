@@ -1,0 +1,9 @@
+*.csv
+*.pth
+data/treinamento.csv
+clas_reviews_ft.pth
+lm_reviews_ft_enc.pth
+tmp.pth
+second.pth
+lm_reviews_ft.pth
+third.pth
